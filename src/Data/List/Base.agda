@@ -324,6 +324,16 @@ deduplicate R? [] = []
 deduplicate R? (x ∷ xs) = x ∷ filter (¬? ∘ R? x) (deduplicate R? xs)
 
 ------------------------------------------------------------------------
+-- Inserting
+
+insert : List A → List A → ℕ → List A
+insert xs ys n = let (xs1 , xs2) = splitAt n xs
+  in xs1 ++ ys ++ xs
+
+insertFromEnd : List A → List A → ℕ → List A
+insertFromEnd xs ys n = insert xs ys (length xs ℕ.∸ n)
+
+------------------------------------------------------------------------
 -- Actions on single elements
 
 infixl 5 _[_]%=_ _[_]∷=_ _─_

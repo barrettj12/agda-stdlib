@@ -432,7 +432,7 @@ Other minor changes
   ring : Ring a ℓ₁ → Ring b ℓ₂ → Ring (a ⊔ b) (ℓ₁ ⊔ ℓ₂)
   commutativeRing : CommutativeRing a ℓ₁ → CommutativeRing b ℓ₂ →
                     CommutativeRing (a ⊔ b) (ℓ₁ ⊔ ℓ₂)
- ```
+  ```
 	
 * Added new definitions to `Algebra.Structures`:
   ```agda
@@ -450,6 +450,11 @@ Other minor changes
 * Added new proofs in `Data.Integer.Properties`:
   ```agda
   sign-cong′ : s₁ ◃ n₁ ≡ s₂ ◃ n₂ → s₁ ≡ s₂ ⊎ (n₁ ≡ 0 × n₂ ≡ 0)
+  ```
+
+* Added insertion functions to `Data.List.Base`:
+  ```agda
+  insert insertFromEnd : List A → List A → ℕ → List A
   ```
 
 * Added new proofs in `Data.Nat.Properties`:
